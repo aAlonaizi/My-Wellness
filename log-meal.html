@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Wellness | Log a Meal</title>
+</head>
+<body>
+    <header>
+        <h1>Log a Meal</h1>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="meals.html">Meals</a></li>
+                <li><a href="log-meal.html">Log a Meal</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form action="#" method="post">
+            <p>
+                <label for="meal-name">Meal name</label><br>
+                <input type="text" id="meal-name" name="meal-name" required>
+            </p>
+            <p>
+                <label for="calories">Calories</label><br>
+                <input type="number" id="calories" name="calories" min="0" required>
+            </p>
+            <p>
+                <label for="meal-date">Date</label><br>
+                <input type="date" id="meal-date" name="meal-date" required>
+            </p>
+            <p>
+                <label for="meal-type">Meal type</label><br>
+                <select id="meal-type" name="meal-type">
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                    <option value="snack">Snack</option>
+                </select>
+            </p>
+            <p>
+                <label for="notes">Notes</label><br>
+                <textarea id="notes" name="notes" rows="4" cols="40" placeholder="Write simple notes about the meal"></textarea>
+            </p>
+            <p>
+                <input type="checkbox" id="balanced" name="balanced">
+                <label for="balanced">This meal was balanced</label>
+            </p>
+            <p>
+                <button type="submit">Save Meal</button>
+                <button type="reset">Reset</button>
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Wellness</p>
+    </footer>
+</body>
+</html>
