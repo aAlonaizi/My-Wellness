@@ -2,53 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Wellness | Home</title>
+    <title>My Wellness</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header id="top">
-        <img src="images/logo.svg" alt="My Wellness logo" width="240">
-        <h1>Welcome to My Wellness</h1>
-        <p>A simple website for tracking healthy daily habits.</p>
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="meals.html">Meals</a></li>
-                <li><a href="log-meal.html">Log a Meal</a></li>
-                <li><a href="pages/contact.html">Contact</a></li>
-            </ul>
+    <header class="site-header">
+        <div class="logo">
+            <img src="images/logo.svg" alt="My Wellness logo">
+            <p>My Wellness</p>
+        </div>
+
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="about.html">About</a>
+            <a href="pages/contact.html">Contact Us</a>
         </nav>
     </header>
 
     <main>
-        <section>
-            <h2>What can you track?</h2>
-            <ul>
-                <li>Meals and calories</li>
-                <li>Water intake</li>
-                <li>Exercise and activity</li>
-            </ul>
+        <section class="hero" id="how-it-works">
+            <img src="images/hero.svg" alt="Healthy lifestyle">
+            <h1>Welcome to My Wellness</h1>
+            <p>Track your meals, exercise, and goals.<br>Eat healthy, stay active, and live better every day.</p>
+            <button class="btn">Get Started</button>
         </section>
 
-        <section>
-            <h2>Quick Gallery</h2>
-            <img src="images/meal.svg" alt="Illustration of a balanced meal" width="260">
-            <img src="images/water.svg" alt="Illustration of a water bottle" width="260">
-            <img src="images/exercise.svg" alt="Illustration of activity and exercise" width="260">
-        </section>
+        <section class="features" id="features">
+            <div class="card">
+                <img src="images/meal.svg" alt="Log Meals">
+                <h3>Log Meals</h3>
+                <p>Record your daily meals and calories.</p>
+            </div>
 
-        <section>
-            <h2>Useful Links</h2>
-            <ul>
-                <li><a href="#top">Back to top</a></li>
-                <li><a href="https://www.who.int/health-topics/physical-activity" target="_blank">Physical activity information</a></li>
-                <li><a href="mailto:info@example.com">Email the website team</a></li>
-            </ul>
+            <div class="card">
+                <img src="images/exercise.svg" alt="Log Exercise">
+                <h3>Log Exercise</h3>
+                <p>Track your workouts and activity.</p>
+            </div>
+
+            <div class="card">
+                <img src="images/goals.svg" alt="Set Goals">
+                <h3>Set Goals</h3>
+                <p>Set your goals and stay on track.</p>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 My Wellness</p>
+    <footer class="site-footer">
+        <p>&copy; 2025 My Wellness</p>
     </footer>
 </body>
 </html>
