@@ -2,36 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Wellness | About</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - My Wellness</title>
+    <link rel="stylesheet" href="layout-flex.css">
+    <!-- <link rel="stylesheet" href="layout-grid.css"> -->
 </head>
 <body>
-    <header>
-        <h1>About My Wellness</h1>
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="meals.html">Meals</a></li>
-                <li><a href="log-meal.html">Log a Meal</a></li>
-                <li><a href="pages/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="page-wrapper">
+        <header class="site-header">
+            <div class="logo">
+                <img src="images/logo.svg" alt="My Wellness logo">
+                <span>My Wellness</span>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="meals.html">Meals</a>
+                <a href="log-meal.html">Log Meal</a>
+                <a href="pages/contact.html">Contact</a>
+            </nav>
+        </header>
 
-    <main>
-        <section>
-            <h2>Website Goal</h2>
-            <p>This website is a student project example. It demonstrates HTML pages, links, images, forms, and tables.</p>
-        </section>
-        <section>
-            <h2>Important Note</h2>
-            <p>The website is for learning only and does not replace advice from health professionals.</p>
-        </section>
-    </main>
+        <main>
+            <section class="hero simple-hero">
+                <div class="hero-text">
+                    <h1>About My Wellness</h1>
+                    <p>My Wellness is a small learning project for practicing HTML and CSS. It helps students organize pages, navigation, cards, forms, tables, and responsive layouts.</p>
+                </div>
+                <img src="images/goals.svg" alt="Goals illustration">
+            </section>
 
-    <footer>
-        <p>&copy; 2026 My Wellness</p>
-    </footer>
+            <section class="features about-cards">
+                <article class="card">
+                    <h3>Simple HTML</h3>
+                    <p>Clear page structure with semantic elements.</p>
+                </article>
+                <article class="card">
+                    <h3>Organized CSS</h3>
+                    <p>External stylesheets keep design separate from content.</p>
+                </article>
+                <article class="card">
+                    <h3>Responsive Layout</h3>
+                    <p>The same content adapts to phone, tablet, and desktop screens.</p>
+                </article>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; 2025 My Wellness</p>
+        </footer>
+    </div>
 </body>
 </html>
