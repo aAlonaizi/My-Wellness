@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log a Meal - My Wellness</title>
+    <link rel="stylesheet" href="layout-flex.css">
+    <!-- <link rel="stylesheet" href="layout-grid.css"> -->
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="site-header">
+            <div class="logo">
+                <img src="images/logo.svg" alt="My Wellness logo">
+                <span>My Wellness</span>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="meals.html">Meals</a>
+                <a href="pages/contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="page-section form-layout">
+                <div>
+                    <h1>Log a Meal</h1>
+                    <p>Use this form as a front-end practice example. It does not save data yet.</p>
+                </div>
+
+                <form class="form-card" action="#" method="post">
+                    <label for="meal-name">Meal name</label>
+                    <input type="text" id="meal-name" name="meal-name" placeholder="Example: Breakfast" required>
+
+                    <label for="calories">Calories</label>
+                    <input type="number" id="calories" name="calories" min="0" required>
+
+                    <label for="meal-type">Meal type</label>
+                    <select id="meal-type" name="meal-type">
+                        <option>Breakfast</option>
+                        <option>Lunch</option>
+                        <option>Dinner</option>
+                        <option>Snack</option>
+                    </select>
+
+                    <label for="notes">Notes</label>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Write a short note"></textarea>
+
+                    <button class="btn" type="submit">Save Meal</button>
+                </form>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; 2025 My Wellness</p>
+        </footer>
+    </div>
+</body>
+</html>
