@@ -1,3 +1,5 @@
+#Chapter 6 - Django
+
 # Branch 04 — Flexbox, Grid, and Responsive Layout
 
 This branch is designed for Chapter 4 layout practice.
