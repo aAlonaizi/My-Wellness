@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Wellness{% endblock %}</title>
+
+    <!-- Change only this line to compare the two layouts: -->
+    <link rel="stylesheet" href="{% static 'css/layout-flex.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/layout-grid.css' %}"> -->
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="site-header">
+            <div class="logo">
+                <img src="{% static 'images/logo.svg' %}" alt="My Wellness logo">
+                <span>My Wellness</span>
+            </div>
+            {% include 'includes/nav.html' %}
+        </header>
+
+        <main>
+
+            <section class="hero">
+                <div class="hero-text">
+              <p class="eyebrow">{% block hero-eyebrow %} {% endblock %}</p>
+            
+
+            <h1>{% block hero-h1 %} {% endblock %}</h1>
+
+            <p>{% block hero-paragraph %} {% endblock %}</p>
+
+            {% block hero-button %} {% endblock %}
+
+            {% block hero-image %} {% endblock %}
+
+            </section>
+            
+
+            {% block content %}
+
+            {% endblock %}
+ 
+        </main>
+
+        {% include 'includes/footer.html' %}
+    </div>
+</body>
+</html>

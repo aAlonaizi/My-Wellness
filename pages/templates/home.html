@@ -1,50 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Wellness</title>
+{% extends 'base.html' %}
 
-    <!-- Change only this line to compare the two layouts: -->
-    <link rel="stylesheet" href="layout-flex.css">
-    <!-- <link rel="stylesheet" href="layout-grid.css"> -->
-</head>
-<body>
-    <div class="page-wrapper">
-        <header class="site-header">
-            <div class="logo">
-                <img src="images/logo.svg" alt="My Wellness logo">
-                <span>My Wellness</span>
-            </div>
+{% load static %}
 
-            <nav class="main-nav" aria-label="Main navigation">
-                <a href="index.html">Home</a>
-                <a href="#nutrition">Nutrition</a>
-                <a href="#exercise">Exercise</a>
-                <a href="#mind-body">Mind &amp; Body</a>
-                <a href="pages/contact.html">Contact</a>
-            </nav>
-        </header>
+{% block title %} My Wellness {% endblock %}
 
-        <main>
-            <section class="hero">
-                <div class="hero-text">
-                    <p class="eyebrow">Healthy habits, one step at a time</p>
-                    <h1>Welcome to My Wellness</h1>
-                    <p>Your journey to a healthier and happier life starts here. Find tips on nutrition, exercise, and daily habits that help you feel your best.</p>
-                    <a class="btn" href="log-meal.html">Log a Meal</a>
-                </div>
+{% block hero-eyebrow %} Healthy habits, one step at a time {% endblock %}            
+            
+{% block hero-h1 %} Welcome to My Wellness {% endblock %}
 
-                <img src="images/hero.svg" alt="Healthy lifestyle illustration">
-            </section>
+{% block hero-paragraph %} Your journey to a healthier and happier life starts here. Find tips on nutrition, exercise,
+and daily habits that help you feel your best. {% endblock %}
 
-            <section class="content-layout">
+{% block hero-button %} <a class="btn" href="log-meal">Log a Meal</a> {% endblock %}
+
+{% block hero-image %} <img src="{% static 'images/hero.svg' %}" alt="Healthy lifestyle illustration"> {% endblock %}
+
+
+{%block content %}
+
+           <section class="content-layout">
                 <div class="main-content">
                     <h2>Explore Topics</h2>
 
                     <section class="features" aria-label="Wellness topics">
                         <article class="card" id="nutrition">
-                            <img src="images/meal.svg" alt="Nutrition icon">
+                            <img src="{% static 'images/meal.svg' %}" alt="Nutrition icon">
                             <div>
                                 <h3>Nutrition</h3>
                                 <p>Discover balanced meal ideas and simple nutrition tips.</p>
@@ -52,7 +32,7 @@
                         </article>
 
                         <article class="card" id="exercise">
-                            <img src="images/exercise.svg" alt="Exercise icon">
+                            <img src="{% static 'images/exercise.svg' %}" alt="Exercise icon">
                             <div>
                                 <h3>Exercise</h3>
                                 <p>Simple workouts and activity ideas for everyone.</p>
@@ -60,7 +40,7 @@
                         </article>
 
                         <article class="card" id="mind-body">
-                            <img src="images/goals.svg" alt="Mind and body icon">
+                            <img src="{% static 'images/goals.svg' %}" alt="Mind and body icon">
                             <div>
                                 <h3>Mind &amp; Body</h3>
                                 <p>Take care of your mental and emotional well-being.</p>
@@ -68,7 +48,7 @@
                         </article>
 
                         <article class="card">
-                            <img src="images/goals.svg" alt="Daily habits icon">
+                            <img src="{% static 'images/goals.svg' %}" alt="Daily habits icon">
                             <div>
                                 <h3>Daily Habits</h3>
                                 <p>Build small habits that make a big difference.</p>
@@ -76,7 +56,7 @@
                         </article>
 
                         <article class="card">
-                            <img src="images/water.svg" alt="Hydration icon">
+                            <img src="{% static 'images/water.svg' %}" alt="Hydration icon">
                             <div>
                                 <h3>Hydration</h3>
                                 <p>Drink more water and stay refreshed all day.</p>
@@ -84,7 +64,7 @@
                         </article>
 
                         <article class="card">
-                            <img src="images/logo.svg" alt="Contact icon">
+                            <img src="{% static 'images/logo.svg' %}" alt="Contact icon">
                             <div>
                                 <h3>Contact</h3>
                                 <p>Get in touch, we would love to hear from you.</p>
@@ -102,11 +82,6 @@
                     </ul>
                 </aside>
             </section>
-        </main>
 
-        <footer class="site-footer">
-            <p>&copy; 2025 My Wellness. All rights reserved.</p>
-        </footer>
-    </div>
-</body>
-</html>
+{% endblock %}
+
