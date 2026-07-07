@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} About - My Wellness {% endblock %}
+
+
+{%block hero-hero-h1 %}About My Wellness{%endblock%}
+{%block hero-hero-p %}My Wellness is a small learning project for practicing HTML and CSS. It helps students organize pages, navigation, cards, forms, tables, and responsive layouts.{%endblock%}
+{%block hero-img %}<img src="{% static 'images/goals.svg' %}" alt="Goals illustration">{%endblock%}
+{%block content %}              <section class="features about-cards">
+                <article class="card">
+                    <h3>Simple HTML</h3>
+                    <p>Clear page structure with semantic elements.</p>
+                </article>
+                <article class="card">
+                    <h3>Organized CSS</h3>
+                    <p>External stylesheets keep design separate from content.</p>
+                </article>
+                <article class="card">
+                    <h3>Responsive Layout</h3>
+                    <p>The same content adapts to phone, tablet, and desktop screens.</p>
+                </article>
+            </section>
+
+{%endblock%}
+
+   
+
+ 
+

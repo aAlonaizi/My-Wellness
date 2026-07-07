@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} My Wellness {% endblock %}
+
+{%block hero-eye-brow %} Healthy habits, one step at a time {%endblock%}
+{%block hero-hero-h1 %}Welcome to My Wellness{%endblock%}
+{%block hero-hero-p %}Your journey to a healthier and happier life starts here. Find tips on nutrition, exercise, and daily habits that help you feel your best.{%endblock%}
+{%block hero-button %}<a class="btn" href="log-meal.html">Log a Meal</a>{%endblock%}
+{%block hero-img %}<img src="{% static 'images/hero.svg' %}" alt="Healthy lifestyle illustration">{%endblock%}
+{%block content %}   <div class="main-content">
+                    <h2>Explore Topics</h2>
+
+                    <section class="features" aria-label="Wellness topics">
+                        <article class="card" id="nutrition">
+                            <img src="{% static 'images/meal.svg' %}" alt="Nutrition icon">
+                            <div>
+                                <h3>Nutrition</h3>
+                                <p>Discover balanced meal ideas and simple nutrition tips.</p>
+                            </div>
+                        </article>
+
+                        <article class="card" id="exercise">
+                            <img src="{% static 'images/exercise.svg' %}" alt="Exercise icon">
+                            <div>
+                                <h3>Exercise</h3>
+                                <p>Simple workouts and activity ideas for everyone.</p>
+                            </div>
+                        </article>
+
+                        <article class="card" id="mind-body">
+                            <img src="{% static 'images/goals.svg' %}" alt="Mind and body icon">
+                            <div>
+                                <h3>Mind &amp; Body</h3>
+                                <p>Take care of your mental and emotional well-being.</p>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="{% static 'images/goals.svg' %}" alt="Daily habits icon">
+                            <div>
+                                <h3>Daily Habits</h3>
+                                <p>Build small habits that make a big difference.</p>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="{% static 'images/water.svg' %}" alt="Hydration icon">
+                            <div>
+                                <h3>Hydration</h3>
+                                <p>Drink more water and stay refreshed all day.</p>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="{% static 'images/logo.svg' %}" alt="Contact icon">
+                            <div>
+                                <h3>Contact</h3>
+                                <p>Get in touch, we would love to hear from you.</p>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+
+                <aside class="sidebar">
+                    <h2>Today’s Focus</h2>
+                    <ul>
+                        <li>Eat one balanced meal.</li>
+                        <li>Walk for 20 minutes.</li>
+                        <li>Drink enough water.</li>
+                    </ul>
+                </aside>{%endblock%}
+
