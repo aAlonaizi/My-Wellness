@@ -9,4 +9,5 @@ urlpatterns = [
     path("log-meal", views.log_meal, name="log_meal"),
     path("meals", views.meals, name="meals"),
     path("exercises", views.exercises, name="exercises"),
+    path("reports", views.reports, name="reports"),
 ]

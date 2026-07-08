@@ -18,3 +18,6 @@ def meals(request):
 
 def exercises(request):
     return render(request, "exercises.html")
+
+def reports(request):
+    return render(request, "reports.html")
