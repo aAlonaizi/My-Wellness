@@ -8,40 +8,38 @@
 
 {% block hero-paragraph %} These are examples of recent exercises. {% endblock %}
 
+{% block hero-button %} <a class="btn" href="log-exercise">Log an Exercise</a> {% endblock %}
 
 
 {%block content %}
 
+
             <section class="page-section">
+
+{% if exercises %}
+
                 <div class="table-card">
                     <table>
                         <thead>
                             <tr>
                                 <th>Exercise</th>
-                                <th>Duration</th>
-                                <th>Date</th>
                             </tr>
                         </thead>
                         <tbody>
+                            {% for exercise in exercises %}
                             <tr>
-                                <td>Running</td>
-                                <td>30 mins</td>
-                                <td>2025-05-15</td>
+                                <td>{{ exercise.emoji }} {{ exercise.name }}</td>
                             </tr>
-                            <tr>
-                                <td>Cycling</td>
-                                <td>45 mins</td>
-                                <td>2025-05-14</td>
-                            </tr>
-                            <tr>
-                                <td>Swimming</td>
-                                <td>60 mins</td>
-                                <td>2025-05-13</td>
-                            </tr>
+                            {% endfor %}
                         </tbody>
                     </table>
                 </div>
+{% else %}
+                <p>No exercises available.</p>
+            {% endif %}
             </section>
+
+
 
 {% endblock %}
 
