@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Meal Confirm Delete - My Wellness {% endblock %}
+                    
+{% block hero-h1 %} Meal Confirm Delete {% endblock %}
+
+{% block hero-button %} <a class="btn" href="{% url 'meals' %}">Show All Meals</a> {% endblock %}
+
+
+{%block content %}
+
+            <section class="page-section">
+                
+            <h2>Are you sure you want to delete this meal?</h2>
+                <ul>
+                    <li><strong>Name:</strong> {{ meal.name }}</li>
+                    <li><strong>Date:</strong> {{ meal.date }}</li>
+                    <li><strong>Calories:</strong> {{ meal.calories }}</li>
+                    <li><strong>Category:</strong> {{ meal.category }}</li>
+                </ul>
+
+                <form method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Confirm Delete</button>
+                    <a class="btn" href="{% url 'meals' %}">Cancel</a>
+                </form>
+              
+            </section>
+
+{% endblock %}
+
+ 
+

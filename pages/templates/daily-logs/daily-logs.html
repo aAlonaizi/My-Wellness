@@ -8,7 +8,7 @@
 
 {% block hero-paragraph %} These are examples of recent daily logs. {% endblock %}
 
-{% block hero-button %} <a class="btn" href="log-daily-log">Log a Daily Log</a> {% endblock %}
+{% block hero-button %} <a class="btn" href="{% url 'log_daily_log' %}">Log a Daily Log</a> {% endblock %}
 
 
 {%block content %}
@@ -25,6 +25,9 @@
                                 <th>Notes</th>
                                 <th>Exercises</th>
                                 <th>Meals</th>
+                                <th>Details</th>
+                                <th>Update</th>
+                                <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -50,6 +53,9 @@
                                         {% endfor %}
                                     </ul>
                                 </td>
+                                <td><a class="btn" href="{% url 'daily_log_detail' daily_log.id %}">Details</a></td>
+                                <td><a class="btn" href="{% url 'daily_log_update' daily_log.id %}">Update</a></td>
+                                <td><a class="btn" href="{% url 'daily_log_delete' daily_log.id %}">Delete</a></td>
                             </tr>
                             {% endfor %}
                         </tbody>

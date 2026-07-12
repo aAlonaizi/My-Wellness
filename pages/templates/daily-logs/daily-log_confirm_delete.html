@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Daily Log Confirm Delete - My Wellness {% endblock %}
+                    
+{% block hero-h1 %} Daily Log Confirm Delete {% endblock %}
+
+{% block hero-button %} <a class="btn" href="{% url 'daily_logs' %}">Show All Daily Logs</a> {% endblock %}
+
+
+{%block content %}
+
+            <section class="page-section">
+                
+            <h2>Are you sure you want to delete this daily log?</h2>
+                <ul>
+                    <li><strong>Date:</strong> {{ daily_log.date }}</li>
+                    <li><strong>Meals:</strong></li>
+                    <ul>
+                        {% for m in daily_log.meals.all %}
+                        <li>{{ m.name }} - {{ m.calories }} calories</li>
+                        {% empty %}
+                        <li>No meals logged.</li>
+                        {% endfor %}
+                    </ul>
+                    <li><strong>Exercises:</strong></li>
+                    <ul>
+                        {% for e in daily_log.exercises.all %}
+                        <li>{{ e.name }} - {{ e.duration }} minutes</li>    
+                        {% empty %}
+                        <li>No exercises logged.</li>   
+                        {% endfor %}
+                    </ul>
+                    <li><strong>Notes:</strong> {{ daily_log.notes }}</li>
+                </ul>
+
+                <form method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Confirm Delete</button>
+                    <a class="btn" href="{% url 'daily_logs' %}">Cancel</a>
+                </form>
+              
+            </section>
+
+{% endblock %}
+
+ 
+

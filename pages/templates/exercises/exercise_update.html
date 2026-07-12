@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Exercise Update - My Wellness {% endblock %}
+                    
+{% block hero-h1 %} Exercise Update {% endblock %}
+
+{% block hero-paragraph %} Update the details of this exercise. {% endblock %}
+
+{% block hero-button %} <a class="btn" href="{% url 'exercises' %}">Show All Exercises</a> {% endblock %}
+
+
+{%block content %}
+
+            <section class="page-section">
+                
+            <form method="post">
+                {% csrf_token %}
+                {{ exercise_form.as_p }}
+                <button type="submit" class="btn">Update Exercise</button>
+            </form>
+              
+            </section>
+
+{% endblock %}
+
+ 
+

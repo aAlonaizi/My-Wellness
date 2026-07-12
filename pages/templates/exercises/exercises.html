@@ -8,7 +8,7 @@
 
 {% block hero-paragraph %} These are examples of recent exercises. {% endblock %}
 
-{% block hero-button %} <a class="btn" href="log-exercise">Log an Exercise</a> {% endblock %}
+{% block hero-button %} <a class="btn" href="{% url 'log_exercise' %}">Log an Exercise</a> {% endblock %}
 
 
 {%block content %}
@@ -23,12 +23,18 @@
                         <thead>
                             <tr>
                                 <th>Exercise</th>
+                                <th>Details</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody>
                             {% for exercise in exercises %}
                             <tr>
                                 <td>{{ exercise.emoji }} {{ exercise.name }}</td>
+                                <td><a class="btn" href="{% url 'exercise_detail' exercise.id %}">Details</a></td>
+                                <td><a class="btn" href="{% url 'exercise_update' exercise.id %}">Edit</a></td>
+                                <td><a class="btn" href="{% url 'exercise_delete' exercise.id %}">Delete</a></td>
                             </tr>
                             {% endfor %}
                         </tbody>

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Meal Update - My Wellness {% endblock %}
+                    
+{% block hero-h1 %} Meal Update {% endblock %}
+
+{% block hero-paragraph %} Update the details of this meal. {% endblock %}
+
+{% block hero-button %} <a class="btn" href="{% url 'meals' %}">Show All Meals</a> {% endblock %}
+
+
+{%block content %}
+
+            <section class="page-section">
+                
+            <form method="post">
+                {% csrf_token %}
+                {{ meal_form.as_p }}
+                <button type="submit" class="btn">Update Meal</button>
+            </form>
+              
+            </section>
+
+{% endblock %}
+
+ 
+

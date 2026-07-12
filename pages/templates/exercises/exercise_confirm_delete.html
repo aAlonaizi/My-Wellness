@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Exercise Confirm Delete - My Wellness {% endblock %}
+                    
+{% block hero-h1 %} Exercise Confirm Delete {% endblock %}
+
+{% block hero-button %} <a class="btn" href="{% url 'exercises' %}">Show All Exercises</a> {% endblock %}
+
+
+{%block content %}
+
+            <section class="page-section">
+                
+            <h2>Are you sure you want to delete this exercise?</h2>
+                <ul>
+                    <li><strong>Name:</strong> {{ exercise.name }}</li>
+                    <li><strong>Date:</strong> {{ exercise.date }}</li>
+                    <li><strong>Calories:</strong> {{ exercise.calories }}</li>
+                    <li><strong>Category:</strong> {{ exercise.category }}</li>
+                </ul>
+
+                <form method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Confirm Delete</button>
+                    <a class="btn" href="{% url 'exercises' %}">Cancel</a>
+                </form>
+              
+            </section>
+
+{% endblock %}
+
+ 
+

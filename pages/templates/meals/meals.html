@@ -8,13 +8,11 @@
 
 {% block hero-paragraph %} These are examples of recent meals. {% endblock %}
 
-{% block hero-button %} <a class="btn" href="log-meal">Log a Meal</a> {% endblock %}
+{% block hero-button %} <a class="btn" href="{% url 'log_meal' %}">Log a Meal</a> {% endblock %}
 
 
 
 {%block content %}
-
-
 
             <section class="page-section">
 {% if meals %}
@@ -26,6 +24,9 @@
                                 <th>Meal</th>
                                 <th>Calories</th>
                                 <th>Category</th>
+                                <th>Details</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -35,6 +36,9 @@
                                 <td>{{ meal.name }}</td>
                                 <td>{{ meal.calories }}</td>
                                 <td>{{ meal.category }}</td>
+                                <td><a class="btn" href="{% url 'meal_detail' meal.id %}">Details</a></td>
+                                <td><a class="btn" href="{% url 'meal_update' meal.id %}">Edit</a></td>
+                                <td><a class="btn" href="{% url 'meal_delete' meal.id %}">Delete</a></td>
                             </tr>
                             {% endfor %}
                         </tbody>

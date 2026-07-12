@@ -2,12 +2,12 @@
 
 {% load static %}
 
-{% block title %} Log an Exercise - My Wellness {% endblock %}
+{% block title %} Log a Daily Log - My Wellness {% endblock %}
 
-{% block hero-h1 %} Log an Exercise {% endblock %}
+{% block hero-h1 %} Log a Daily Log {% endblock %}
 {% block hero-paragraph %} Use this form as a front-end practice example. It does not save data yet.{% endblock %}
 
-{% block hero-button %} <a class="btn" href="exercises">Exercises List</a> {% endblock %}
+{% block hero-button %} <a class="btn" href="{% url 'daily_logs' %}">Daily Logs List</a> {% endblock %}
 
 {%block content %}
 
@@ -15,8 +15,8 @@
 
         <form class="form-card" method="post">
             {% csrf_token %}
-            {{ exercise_form.as_p }}
-            <button class="btn" name="action" value="save" type="submit">Save Exercise</button>
+            {{ daily_log_form.as_p }}
+            <button class="btn" name="action" value="save" type="submit">Save Daily Log</button>
             <button class="btn" name="action" value="save_and_add_new" type="submit">Save & add New</button>
         </form>
     </section>

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Daily Log Detail - My Wellness {% endblock %}
+                    
+{% block hero-h1 %} Daily Log Details {% endblock %}
+
+{% block hero-paragraph %} These are all the details we have about this daily log. {% endblock %}
+
+{% block hero-button %} <a class="btn" href="{% url 'daily_logs' %}">Show All Daily Logs</a> {% endblock %}
+
+
+
+{%block content %}
+
+            <section class="page-section">
+                
+                <h2>{{ daily_log.date }}</h2>
+                <ul>
+                    <li><strong>Notes:</strong> {{ daily_log.notes }}</li>
+                    <li><strong>Meals:</strong></li>
+                    <ul>
+                        {% for m in daily_log.meals.all %}
+                        <li>{{ m.name }} - {{ m.calories }} calories</li>
+                        {% empty %}
+                        <li>No meals logged.</li>
+                        {% endfor %}
+                                    
+                    </ul>
+                    <li><strong>Exercises:</strong></li>
+                    <ul>
+                        {% for e in daily_log.exercises.all %}
+                        <li>{{ e.name }} - {{ e.duration }} minutes</li>
+                        {% empty %}
+                        <li>No exercises logged.</li>
+                        {% endfor %}
+                                    
+                    </ul>
+                <a class="btn" href="{% url 'daily_log_update' daily_log.id %}">Edit</a>
+                <a class="btn" href="{% url 'daily_log_delete' daily_log.id %}">Delete</a>
+              
+            </section>
+
+{% endblock %}
+
+ 
+

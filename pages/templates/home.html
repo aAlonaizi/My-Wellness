@@ -11,7 +11,7 @@
 {% block hero-paragraph %} Your journey to a healthier and happier life starts here. Find tips on nutrition, exercise,
 and daily habits that help you feel your best. {% endblock %}
 
-{% block hero-button %} <a class="btn" href="log-meal">Log a Meal</a> {% endblock %}
+{% block hero-button %} <a class="btn" href="{% url 'log_meal' %}">Log a Meal</a> {% endblock %}
 
 {% block hero-image %} <img src="{% static 'images/hero.svg' %}" alt="Healthy lifestyle illustration"> {% endblock %}
 
