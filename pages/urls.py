@@ -1,11 +1,11 @@
 from django.urls import path
+from django.contrib.auth import views as auth_views
 from . import views
 
 urlpatterns = [
     path("", views.home, name="home"),
-    path("home", views.home, name="home"),
-    path("about", views.about, name="about"),
-    path("contact", views.contact, name="contact"),
+    path("about/", views.about, name="about"),
+    path("contact/", views.contact, name="contact"),
 
     path("meals/log-meal", views.log_meal, name="log_meal"),
     path("meals/", views.meals, name="meals"),
@@ -24,4 +24,8 @@ urlpatterns = [
     path("daily-logs/<int:daily_log_id>/", views.daily_log_detail, name="daily_log_detail"),
     path("daily-logs/<int:daily_log_id>/edit/", views.daily_log_update, name="daily_log_update"),
     path("daily-logs/<int:daily_log_id>/delete/", views.daily_log_delete, name="daily_log_delete"),
+
+    path("login/", auth_views.LoginView.as_view(), name="login"),
+    path("logout/", auth_views.LogoutView.as_view(), name="logout"),
+    path("signup/", views.signup, name="signup"),
 ]

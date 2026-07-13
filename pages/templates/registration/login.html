@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Login - My Wellness {% endblock %}
+             
+{% block hero-h1 %} Login {% endblock %}
+
+{% block hero-paragraph %} Please enter your credentials to log in {% endblock %}
+
+{%block content %}
+
+            <section class="page-section form-layout">
+
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="btn" type="submit">Login</button>
+            </section>
+
+{% endblock %}
