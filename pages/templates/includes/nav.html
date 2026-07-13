@@ -1,8 +1,8 @@
             <nav class="main-nav" aria-label="Main navigation">
-                <a href="home">Home</a>
-                <a href="about">About</a>
-                <a href="/meals">Meals</a>
-                <a href="/exercises">Exercises</a>
-                <a href="/daily-logs">Daily Logs</a>
-                <a href="contact">Contact</a>
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'meals' %}">Meals</a>
+                <a href="{% url 'exercises' %}">Exercises</a>
+                <a href="{% url 'daily_logs' %}">Daily Logs</a>
+                <a href="{% url 'contact' %}">Contact</a>
             </nav>
